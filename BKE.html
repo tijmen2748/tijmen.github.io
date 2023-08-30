@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+    }
+
+    td {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 48px;
+      vertical-align: middle;
+    }
+
+    button {
+      background-color: lightblue;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <br>
+  <button id="reset">Reset</button>
+  
+  <script>
+    const cells = document.querySelectorAll("td");
+    const resetBtn = document.querySelector("#reset");
+    let xIsNext = true;
+    let gameOver = false;
+    
+    cells.forEach(cell => {
+      cell.addEventListener("click", handleClick);
+    });
+    
+    resetBtn.addEventListener("click", reset);
+    
+    function handleClick() {
+      if (gameOver) return;
+      if (this.textContent) return;
+      this.textContent = xIsNext ? "X" : "O";
+      xIsNext = !xIsNext;
+      checkForWin();
+    }
+    
+    function checkForWin() {
+      const winConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+      ];
+      winConditions.forEach(condition => {
+        const [a, b, c] = condition;
+        const cellA = cells[a];
+        const cellB = cells[b];
+        const cellC = cells[c];
+        if (cellA.textContent && cellA.textContent === cellB.textContent && cellA.textContent === cellC.textContent) {
+          gameOver = true;
+          cells.forEach(cell => {
+            cell.removeEventListener("click", handleClick);
+          });
+          alert(`${cellA.textContent} has won the game!`);
+        }
+      });
+    }
+    
+    function reset() {
+      cells.forEach(cell => {
+        cell.textContent = "";
+        cell.addEventListener("click", handleClick);
+      });
+      xIsNext = true;
+      gameOver = false;
+    }
+  </script>
+</body>
+</html>
