@@ -1,5 +1,5 @@
 body {
-  background-color: SkyBlue;
+  background-color: LightCyan;
   }
   /*Hiermee geef ik de achtergrond kleur van mijn website aan*/
   h1 {
@@ -124,7 +124,7 @@ body {
 }
 </style>
 </head>
-<body style="background-color:white;">
+<body style="background-color:LightSkyBlue;">
 
 <div class="navbar">
   <div class="dropdown">
@@ -144,4 +144,3 @@ body {
 
 </body>
 </html>
-
