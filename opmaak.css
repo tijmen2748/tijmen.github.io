@@ -1,9 +1,9 @@
 ody {
-  background-color: Black;
+  background-color: Aqua;
   }
   /*Hiermee geef ik de achtergrond kleur van mijn website aan*/
   h1 {
-    color: Aqua;
+    color: Black;
     text-align: center;
     text-decoration-line: underline;
   }
