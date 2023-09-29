@@ -1,9 +1,9 @@
 body {
-  background-color: White;
+  background-color: Black;
   }
   /*Hiermee geef ik de achtergrond kleur van mijn website aan*/
   h1 {
-    color: Black;
+    color: White;
     text-align: center;
     text-decoration-line: underline;
   }
