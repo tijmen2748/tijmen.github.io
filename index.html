@@ -1,22 +1,52 @@
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is der eerst pagina van de site-->
-   <head>
-    <title>Informatica</title><!--dit is de naam/titel van de site-->
-   <link rel="stylesheet" type="text/css" href="opmaak.css">
-        <meta charset="utf-8">
-        <!--Hiermee geef ik de link naar mijn css-bestand aan-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Hiermee geef ik aan dat mijn website het ook op de telefoon doet-->
-    </head>
-    <body>          
-        
-        <ul>
-            <div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styling for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style for the dropdown links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <span>Hover me</span>
     <div class="dropdown-content">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+    </div>
+</div>
+
+</body>
+</html>
         <h3><a href="index.html">homepage</a>
             <a href="3-lagenmodel.html">3-lagenmodel</a>
             <a href="computerwerking.html">computerwerking</a>
