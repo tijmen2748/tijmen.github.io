@@ -1,18 +1,38 @@
-<!DOCTYPE html> <!--Dit is de hoofdpagina van mijn website-->
-<html> <!--hierbij volgt mijn html wat ik gebruik-->
-    <head>
-        <title>Uitlegvideo</title>
-        <link rel="stylesheet" type="text/css" href="opmaak.css">
-        <meta charset="utf-8">
-        <!--met deze link kom je bij mijn css-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--via deze link kun je zien dat mijn website het ook op je telefoon doet in plaats van alleen een computer/laptop-->
-    </head>
-    <body>          
-        
+  .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style for the dropdown links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color:MediumBlue;
+        }
+    </style>
+</head>
+<body>
 
 <div class="dropdown">
-    <span>Dropdown      </span>
+    <span>Dropdown </span>
     <div class="dropdown-content">
         <h3><a href="index.html">Homepage</a
             <a href="3-lagenmodel.html">3-lagenmodel</a>
